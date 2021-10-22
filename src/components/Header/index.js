@@ -4,7 +4,7 @@ import * as S from  './styles'
 export  function Header ({ logoimgheader, btnabout, btnrecipes, btnsubscribe,titlerecipes, backgroundimgheader }) {
 
 return (
-    <S.ContainerHeader>
+    <S.ContainerHeader background={backgroundimgheader} >
         <S.BoxH>
         <S.MenuHeader>
             <S.BoxLogoheader>

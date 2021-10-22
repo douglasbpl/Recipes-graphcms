@@ -2,11 +2,10 @@ import styled from 'styled-components'
 
 
 export const ContainerHeader = styled.div`
-background-image: url(https://media.graphcms.com/jLefPXpgRqim28QPXpUN);
+background-image: url(${props => props.background});
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-
 `
 export const BoxH = styled.div`
 display:flex;
@@ -20,7 +19,6 @@ width:100%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-
 `
 export const BoxLogoheader = styled.div`
 height: 100%;
@@ -50,7 +48,7 @@ justify-content:center;
 align-items:center;
 font-family: 'PT Sans', sans-serif;
 letter-spacing: 2.52px;
-font-size:1.3vw;
+font-size:1.5vw;
 color: #373737;
 opacity: 1;
 height:100%;
@@ -74,7 +72,6 @@ height:100%;
 
 export const TitleHeader = styled.h1`
 text-align:center;
-letter-spacing: 15.75px;
 color: #373737;
 font-size:6vw;
 font-family: 'PT Sans', sans-serif;

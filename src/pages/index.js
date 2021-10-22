@@ -100,7 +100,8 @@ export default function Index({ data }) {
       btnrecipes={dataHeader.btnrecipes}
       btnsubscribe={dataHeader.btnsubscribe}
       titlerecipes={dataHeader.titlerecipes}
-      backgroundimgheader={dataHeader.backgroundimgheader.url}           
+      backgroundimgheader={dataHeader.backgroundimgheader.url}
+                
       />
 
       <Main

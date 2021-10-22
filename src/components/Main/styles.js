@@ -19,7 +19,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
-height:30vh;
+min-height:30vh;
 width:80%;
  h2 {
     font-family: 'PT Sans', sans-serif;
