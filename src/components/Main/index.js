@@ -1,8 +1,49 @@
 import React from 'react'
 import * as S from  './styles'
 
-export  function Main ({latesttitle, cakeimg, caketxt, pizzaimg, pizzatxt,
-     smothieimg,smothietxt,spoonimg,spoontitle,spoontxt,subscribetitle,subscribetxt,btnsubmit }) {
+import { graphql, useStaticQuery } from 'gatsby'
+
+export function Main() {
+
+ const data = useStaticQuery(graphql`
+ query {
+     alldata {
+            mains {
+                latesttitle
+                caketxt
+                pizzatxt
+                smothietxt
+                cakeimg {
+                url
+                id
+                }
+                pizzaimg {
+                id
+                url
+                }
+                smothieimg {
+                id
+                url
+                }
+                spoonimg {
+                id
+                url
+                }
+                spoontitle
+                spoontxt
+                subscribetitle
+                subscribetxt
+                btnsubmit                 
+            }
+        }
+    }
+ `)
+
+ const { latesttitle, cakeimg, caketxt, pizzaimg, pizzatxt,
+    smothieimg,smothietxt,spoonimg,spoontitle,spoontxt,subscribetitle,
+    subscribetxt,btnsubmit } = data.alldata.mains[0]
+
+
 
 return (
     <S.ContainerMain>
@@ -10,28 +51,28 @@ return (
         <S.SectionF>
             <S.BoxLatest>
                 <h2>{latesttitle}</h2>
-                <S.Divide></S.Divide>
+                
             </S.BoxLatest>
             
             <S.BoxFood>
                 <S.BoxImgTxtFood>
-                    <S.ImgFood src={cakeimg} alt="cake"/>
+                    <S.ImgFood src={cakeimg.url} alt="cake"/>
                     <div>
-                    <div></div>
+                    
                     <p>{caketxt}</p>
                     </div>
                 </S.BoxImgTxtFood>
                 <S.BoxImgTxtFood>
-                    <S.ImgFood  src={pizzaimg} alt="pizza"/>
+                    <S.ImgFood  src={pizzaimg.url} alt="pizza"/>
                     <div>
-                    <div></div>
+                    
                     <p>{pizzatxt}</p>
                     </div>
                 </S.BoxImgTxtFood>
                 <S.BoxImgTxtFood>
-                    <S.ImgFood src={smothieimg} alt="smothieimg"/>
+                    <S.ImgFood src={smothieimg.url} alt="smothieimg"/>
                     <div>
-                    <div></div>
+                    
                     <p>{smothietxt}</p>
                     </div>
                 </S.BoxImgTxtFood>                
@@ -40,10 +81,9 @@ return (
 
         <S.SectionS>
             <div>
-            <img src={spoonimg} alt="Spoom"/>
-            <div>
+             <img src={spoonimg.url} alt="Spoom"/>
+             <div>
                 <h2>{spoontitle}</h2>
-                <div></div>
                 <p>{spoontxt}</p>
             </div>
             </div>

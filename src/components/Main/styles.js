@@ -19,7 +19,7 @@ display:flex;
 justify-content:center;
 align-items:center;
 flex-direction:column;
-min-height:30vh;
+min-height:57vh;
 width:80%;
  h2 {
     font-family: 'PT Sans', sans-serif;
@@ -28,15 +28,19 @@ width:80%;
     color: #373737;
     text-transform: uppercase;
  }
+ &:after{
+    content: "";
+    width: 8vw;
+    height: 7px;
+    background: #000;
+    display: flex;
+    position: relative;
+    top:0.4px;
+    right: 1vw;
+}
+ 
 `
 
-export const Divide = styled.div`
-background-color: #373737;
-height:8px;
-width:8vw;
-position:relative;
-bottom:20px;
-`
 
 export const BoxFood = styled.div`
 display:flex;
@@ -61,19 +65,22 @@ div{
     align-items:center;
     flex-direction:column;
     width:80%;
-    height:30%;
+    height:5%;
 }
-
- div > div{
-     height:5px;
-     background-color:black;
-     width:55px;
-     position:relative;
-     top:2px;
- }
+div &:after{
+    content: "";
+    width: 50px;
+    height: 5px;
+    background: #000;
+    display: flex;
+    position: relative;
+    bottom: 20vh;
+    left: 0.1vw;
+} 
+     
   div >  p {
     font-family: 'PT Sans', sans-serif;
-    font-size:1.6vw;
+    font-size:1.2vw;
     letter-spacing: 0px;
     color: #373737;
   }
@@ -92,13 +99,14 @@ width:100%;
     display:flex;
     align-items:center;
     width:100%;
-    height:90vh;
-    
-    }
-        div > img {
+    height:90vh;           
+       }
+        div > img{
             width:50%;
             height:80%;
         }
+                            
+        
             div > div {
                 display:flex;
                 flex-direction:column;
@@ -108,6 +116,7 @@ width:100%;
                 width:50%;
                 background-color:white;                                 
             }
+                     
                 div > div > h2 {
                     width: 20%;
                     height: 9vh;
@@ -115,9 +124,20 @@ width:100%;
                     font-size:2vw;
                     font-family: 'PT Sans',sans-serif;
                     letter-spacing: 1.72px;
-                    color: #373737;;
+                    color: #373737;
+                }
+                div > div > h2 ::after{
+                    content: "";
+                    width: 4vw;
+                    height: 0.5vh;
+                    background: #000;       
+                    display: flex;
+                    position: relative;
+                    top: 2vh;
+                    left: 3vw;
                 }
 
+                
                 div > div > p {
                     height: 27vh;
                     width: 40vw;
@@ -127,18 +147,9 @@ width:100%;
                     letter-spacing: 0px;
                     color: #373737;
                 }
- 
-                div > div > div {
-                    background-color:#373737;
-                    height: 7px;
-                    width:7%;
-                    position:relative;
-                    bottom:50px;                     
-                    
-                }
+                                 
+}
 `
-
-
 export const SectionT = styled.section`
 display:flex;
 width:100%;

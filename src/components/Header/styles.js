@@ -6,6 +6,7 @@ background-image: url(${props => props.background});
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
+border:30px white solid
 `
 export const BoxH = styled.div`
 display:flex;
@@ -26,12 +27,12 @@ width: 5%;
 display: flex;
 align-items: center;
 justify-content: center;
-margin-left:2rem;
+margin-left:4rem;
 `
 
 export const LogoHeader = styled.img`
 width:5.32vw;
-height:6vw;
+height:6vh;
 `
 
 export const ListMenuHeader = styled.ul`
@@ -48,7 +49,7 @@ justify-content:center;
 align-items:center;
 font-family: 'PT Sans', sans-serif;
 letter-spacing: 2.52px;
-font-size:1.5vw;
+font-size:1.2vw;
 color: #373737;
 opacity: 1;
 height:100%;
@@ -66,14 +67,14 @@ cursor:pointer;
 export const BoxTitle = styled.div`
 display: flex;
 justify-content: center;
-align-items: center;
-height:100%;
+align-items:flex-end;
+height:60%;
 `
 
 export const TitleHeader = styled.h1`
 text-align:center;
 color: #373737;
-font-size:6vw;
+font-size:5vw;
 font-family: 'PT Sans', sans-serif;
 letter-spacing: 15.75px;
 color: #373737;

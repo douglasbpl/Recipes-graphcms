@@ -12,6 +12,7 @@ module.exports = {
   }
 ]
 ,
+plugins: [`gatsby-plugin-react-helmet`],
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
     title: "My Gatsby Site",
